@@ -25,9 +25,9 @@ The Histogram of gray scale image and color image is shown.
 
 
 ## Program:
-# Developed By: KOWSALYA M
-# Register Number: 212222230069
-
+### Developed By: KOWSALYA M
+### Register Number: 212222230069
+### Input Grayscale Image and Color Image
 ```
 import cv2
 import matplotlib.pyplot as plt
@@ -36,15 +36,14 @@ grey=cv2.cvtColor(gray_image,cv2.COLOR_BGR2GRAY)
 plt.imshow(grey)
 plt.axis('on')
 plt.show()
-```
 
-```
+
 color_image=cv2.imread('fish.jpeg')
 plt.imshow(color_image)
 plt.axis('on')
 plt.show()
 ```
-
+### Histogram of Grayscale Image and any channel of Color Image
 ```
 import numpy as np
 Gray_image = cv2.imread("rabbit.jpeg")
@@ -59,9 +58,8 @@ plt.xlabel("Grayscale Value")
 plt.ylabel("Pixel Count")
 plt.stem(gray_hist)
 plt.show()
-```
 
-```
+
 color_hist = cv2.calcHist([Color_image],[0],None,[2600],[0,2600])
 plt.figure() 
 plt.imshow(color_image)
@@ -72,28 +70,25 @@ plt.ylabel("Pixel Count")
 plt.stem(color_hist)
 plt.show()
 ```
-
+### Histogram Equalization of Grayscale Image.
 ```
 gray_image = cv2.imread("rabbit.jpeg")
 grey=cv2.cvtColor(gray_image,cv2.COLOR_BGR2GRAY)
 plt.imshow(grey)
 plt.show()
-```
 
-```
+
 equ = cv2.equalizeHist(grey)
 plt.imshow(equ)
 plt.show()
-```
 
-```
+
 color_image=cv2.imread('fish.jpeg')
 grey=cv2.cvtColor(color_image,cv2.COLOR_BGR2GRAY)
 plt.imshow(color_image)
 plt.show()
-```
 
-```
+
 eq = cv2.equalizeHist(grey)
 plt.imshow(eq)
 plt.show()
